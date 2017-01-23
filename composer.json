@@ -1,0 +1,26 @@
+{
+    "name": "ger/modbreak",
+    "type": "phpbb-extension",
+    "description": "Adds a BBcode for moderator remarks, only usable for moderators",
+    "homepage": "",
+    "version": "1.0.0",
+    "time": "2017-01-23",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Ger",
+            "email": "",
+            "homepage": "https://github.com/GerB",
+            "role": ""
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "extra": {
+        "display-name": "Modbreak",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2,"
+        }
+    }
+}

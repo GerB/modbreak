@@ -1,0 +1,7 @@
+services:
+    ger.modbreak.listener:
+        class: ger\modbreak\event\main_listener
+        arguments:
+            - '@auth'
+        tags:
+            - { name: event.listener }

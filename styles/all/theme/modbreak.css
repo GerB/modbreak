@@ -1,0 +1,20 @@
+p.bbc_mod_head {
+	margin-left: 50px;
+	margin-bottom: 0;
+	width: 60% !important;
+	padding: 6px 12px;
+	font-size: inherit;
+	background: #319bdb;
+	color: #fff;
+	border: 1px solid #246594;
+	border-radius: 8px 8px 0px 0px;
+}
+.bbc_mod_text {
+	border-style: solid;
+	border-color: #246594;
+	border-width: 0px 1px 1px 1px;
+	border-radius: 0 0 8px 8px;
+	width: 60%;
+	margin-left: 50px;
+	padding: 6px 12px;
+}
