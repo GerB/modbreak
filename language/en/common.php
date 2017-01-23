@@ -2,9 +2,9 @@
 
 /**
  *
- * Modbreak [Dutch]
+ * Modbreak [English]
  *
- * @copyright (c) 2016 Ger Bruinsma
+ * @copyright (c) 2017 Ger Bruinsma
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
