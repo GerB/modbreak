@@ -43,18 +43,17 @@ class install_modbreak extends container_aware_migration
 			include($this->phpbb_root_path . 'includes/acp/acp_bbcodes.' . $this->php_ext);
 		}
 		$bbcode_tool = new \acp_bbcodes();
-		/**
-		 * @var array An array of bbcodes data to install
-		 */
+
 		$bbcode_data = array(
 			'mod=' => array(
 				'bbcode_match'		=> '[mod={SIMPLETEXT}]{TEXT}[/mod]',
-				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD} {SIMPLETEXT}:</p>
-										<div class="bbc_mod_text">
-											<div class="quote">
-											{TEXT}
-											</div>
-										</div>',
+				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD} {SIMPLETEXT}:</p><div class="bbc_mod_text">{TEXT}</div>',
+				'bbcode_helpline'	=> '',
+				'display_on_posting'=> 0,
+			),
+			'mod=' => array(
+				'bbcode_match'		=> '[mod]{TEXT}[/mod]',
+				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}:</p><div class="bbc_mod_text">{TEXT}</div>',
 				'bbcode_helpline'	=> '',
 				'display_on_posting'=> 0,
 			),
