@@ -1,6 +1,5 @@
 p.bbc_mod_head {
-	margin-left: 50px;
-	margin-bottom: 0;
+	margin: 1.4em auto 0 50px;
 	width: 60% !important;
 	padding: 6px 12px;
 	font-size: inherit;
