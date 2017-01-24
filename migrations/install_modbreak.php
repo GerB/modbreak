@@ -46,14 +46,8 @@ class install_modbreak extends container_aware_migration
 
 		$bbcode_data = array(
 			'mod=' => array(
-				'bbcode_match'		=> '[mod={SIMPLETEXT}]{TEXT}[/mod]',
-				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD} {SIMPLETEXT}:</p><div class="bbc_mod_text">{TEXT}</div>',
-				'bbcode_helpline'	=> '',
-				'display_on_posting'=> 0,
-			),
-			'mod=' => array(
-				'bbcode_match'		=> '[mod]{TEXT}[/mod]',
-				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}:</p><div class="bbc_mod_text">{TEXT}</div>',
+				'bbcode_match'		=> '[mod={SIMPLETEXT;optional;defaultValue=}]{TEXT}[/mod]',
+				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{SIMPLETEXT}</p><div class="bbc_mod_text">{TEXT}</div>',
 				'bbcode_helpline'	=> '',
 				'display_on_posting'=> 0,
 			),
