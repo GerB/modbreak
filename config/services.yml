@@ -3,5 +3,6 @@ services:
         class: ger\modbreak\event\main_listener
         arguments:
             - '@auth'
+            - '@request'
         tags:
             - { name: event.listener }
