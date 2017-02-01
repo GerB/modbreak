@@ -25,10 +25,12 @@ class main_listener implements EventSubscriberInterface
 		);
 	}
 	protected $auth;
+	protected $request;
 
-	public function __construct(\phpbb\auth\auth $auth)
+	public function __construct(\phpbb\auth\auth $auth, \phpbb\request\request_interface $request)
 	{
 		$this->auth = $auth;
+		$this->request = $request;
 	}
 
 	/**
@@ -52,7 +54,7 @@ class main_listener implements EventSubscriberInterface
 	 */
 	public function set_persmissions($event)
 	{
-		if (!$this->auth->acl_get('m_'))
+		if (!$this->auth->acl_get('m_', $this->request->variable('f', 0)))
 		{
 			$event['parser']->disable_bbcode('mod');
 		}
