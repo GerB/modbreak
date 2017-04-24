@@ -8,6 +8,8 @@
 
 * Go to "ACP" > "Customise" > "Extensions" and enable the "Modbreak" extension.
 
+Note that there won't be a button created for this BBcode since it's moderator-only.
+
 ## Styling
 Some default styling is added in the extension. Change or override the definitions for 
 'p.bbc_mod_head' and '.bbc_mod_text' if desired.
