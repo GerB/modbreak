@@ -29,7 +29,7 @@ class install_modbreak extends container_aware_migration
 	}
 	
 	/**
-	 * Installs modbrak BBcode, used by migrations to perform add/updates
+	 * Installs modbreak BBcode, used by migrations to perform add/updates
 	 *
 	 * @param array $bbcode_data Array of BBCode data to install
 	 * @return null
@@ -46,13 +46,13 @@ class install_modbreak extends container_aware_migration
 
 		$bbcode_data = array(
 			'mod=' => array(
-				'bbcode_match'		=> '[mod={SIMPLETEXT;optional;defaultValue=}]{TEXT}[/mod]',
-				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{SIMPLETEXT}</p><div class="bbc_mod_text">{TEXT}</div>',
+				'bbcode_match'		=> '[mod={TEXT1;optional;defaultValue=}]{TEXT2}[/mod]',
+				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{TEXT1}</p><div class="bbc_mod_text">{TEXT2}</div>',
 				'bbcode_helpline'	=> '',
 				'display_on_posting'=> 0,
 			),
 		);
-			
+
 		foreach ($bbcode_data as $bbcode_name => $bbcode_array)
 		{
 			// Build the BBCodes
@@ -109,6 +109,22 @@ class install_modbreak extends container_aware_migration
 				}
 			}
 		}
+	}
+	
+	
+	/**
+	 * Revert by removing the BBcode
+	 */	
+	public function revert_data()
+	{	
+		return array(
+			array('custom', array(array($this, 'remove_bbcode'))),
+		);
+	}
+	
+	public function remove_bbcode()
+	{
+		$this->db->sql_query('DELETE FROM ' . BBCODES_TABLE . " WHERE LOWER(bbcode_tag) = 'mod='");
 	}
 	
 } // EoF
