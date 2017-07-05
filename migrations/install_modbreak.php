@@ -49,7 +49,7 @@ class install_modbreak extends container_aware_migration
 				'bbcode_match'		=> '[mod={TEXT1;optional;defaultValue=}]{TEXT2}[/mod]',
 				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{TEXT1}</p><div class="bbc_mod_text">{TEXT2}</div>',
 				'bbcode_helpline'	=> '',
-				'display_on_posting'=> 0,
+				'display_on_posting'=> 1,
 			),
 		);
 
