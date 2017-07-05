@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "Adds a BBcode for moderator remarks, only usable for moderators",
     "homepage": "",
-    "version": "1.0.0",
-    "time": "2017-01-23",
+    "version": "1.1.0",
+    "time": "2017-07-05",
     "license": "GPL-2.0",
     "authors": [
         {
