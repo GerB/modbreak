@@ -1,9 +1,10 @@
-<!-- IF not S_RESTORE_ALLOWED -->
-<style type="text/css">
-button[value="mod="] {
-	display: none;
-}
-</style>
+<!-- IF S_MODBREAK_ALLOWED -->
+	<script type="text/javascript">
+	function bbstyle_modbreak() {
+		bbfontstyle('[mod={S_USERNAME} time=' + (timestamp = Math.floor(Date.now() / 1000)) + ' user_id={S_USER_ID}]', '[/mod]');
+	}
+	</script>
+	<button type="button" class="button button-secondary bbcode-mod" name="modbreak" value="mod" onclick="bbstyle_modbreak()" title="{L_MODBREAK_BUTTON_TOOLTIP}">
+		mod
+	</button>
 <!-- ENDIF -->
-
-

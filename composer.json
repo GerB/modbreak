@@ -3,24 +3,36 @@
     "type": "phpbb-extension",
     "description": "Adds a BBcode for moderator remarks, only usable for moderators",
     "homepage": "",
-    "version": "1.1.0",
-    "time": "2017-07-05",
+    "version": "1.2.0",
+    "time": "2018-08-24",
     "license": "GPL-2.0",
     "authors": [
         {
             "name": "Ger",
             "email": "",
             "homepage": "https://github.com/GerB",
-            "role": ""
+            "role": "Developer"
+        },
+        {
+            "name": "LukeWCS",
+            "email": "",
+            "homepage": "https://www.wcsaga.org",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "phpbb/phpbb": ">=3.2"
     },
     "extra": {
         "display-name": "Modbreak",
         "soft-require": {
-            "phpbb/phpbb": ">=3.2,"
+            "phpbb/phpbb": ">=3.2"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/modbreak_bbcode",
+            "filename": "version_check"
         }
     }
 }
