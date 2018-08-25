@@ -5,6 +5,7 @@
  * Modbreak
  *
  * @copyright (c) 2016 Ger Bruinsma
+ * @copyright (c) 2018, LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -13,18 +14,18 @@ namespace ger\modbreak\migrations;
 
 use phpbb\db\migration\container_aware_migration;
 
-class update_1_1 extends container_aware_migration
+class update_1_2 extends container_aware_migration
 {
 
 	static public function depends_on()
 	{
-		return array('\ger\modbreak\migrations\install_modbreak');
+		return array('\ger\modbreak\migrations\update_1_1');
 	}
 
 	public function update_data()
 	{
 		return array(
-			array('custom', array(array($this, 'update_1_1'))),
+			array('custom', array(array($this, 'update_1_2'))),
 		);
 	}
 	
@@ -35,7 +36,7 @@ class update_1_1 extends container_aware_migration
 	 * @return null
 	 * @access public
 	 */
-	public function update_1_1($bbcode_data)
+	public function update_1_2($bbcode_data)
 	{
 		// Load the acp_bbcode class
 		if (!class_exists('acp_bbcodes'))
@@ -49,7 +50,7 @@ class update_1_1 extends container_aware_migration
 				'bbcode_match'		=> '[mod={TEXT1;optional;defaultValue=}]{TEXT2}[/mod]',
 				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{TEXT1}</p><div class="bbc_mod_text">{TEXT2}</div>',
 				'bbcode_helpline'	=> '',
-				'display_on_posting'=> 1,
+				'display_on_posting'=> 0,
 			),
 		);
 

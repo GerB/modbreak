@@ -17,3 +17,7 @@ p.bbc_mod_head {
 	margin-left: 50px;
 	padding: 6px 12px;
 }
+.bbc_mod_head a {
+	color: #fff;
+	text-decoration: underline;
+}
