@@ -1,3 +1,4 @@
+/* HEADING */
 p.bbc_mod_head {
 	margin: 1.4em auto 0 50px;
 	width: 60% !important;
@@ -8,6 +9,7 @@ p.bbc_mod_head {
 	border: 1px solid #246594;
 	border-radius: 8px 8px 0px 0px;
 }
+/* MESSAGE */
 .bbc_mod_text {
 	border-style: solid;
 	border-color: #246594;
@@ -17,6 +19,7 @@ p.bbc_mod_head {
 	margin-left: 50px;
 	padding: 6px 12px;
 }
+/* PROFILE LINK */
 .bbc_mod_head a {
 	color: #fff;
 	text-decoration: underline;

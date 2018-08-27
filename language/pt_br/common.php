@@ -8,9 +8,9 @@
  * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
- * Lang_iso   : en
+ * Lang_iso   : pt_br
  * Lang_ver   : 1.2.0
- * Lang_author: LukeWCS
+ * Lang_author: eunaumtenhoid 2018 (https://github.com/phpBBTraducoes)
  *
  */
 
@@ -27,8 +27,8 @@ if (empty($lang) || !is_array($lang))
 // Some characters you may want to copy&paste:
 // ’ » „ “ — …
 $lang = array_merge($lang, array(
-	'MODBREAK_HEAD'					=> 'Moderator message',
-	'MODBREAK_HEAD_FROM'			=> ' from: ',
+	'MODBREAK_HEAD'					=> 'Mensagem do moderador',
+	'MODBREAK_HEAD_FROM'			=> ' de: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
-	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insert moderator message in post: [mod]Text[/mod]     Can only be used by moderators',
+	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insira a mensagem do moderador no post: [mod]Texto[/mod]     Só pode ser usado por moderadores',
 ));

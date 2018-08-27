@@ -46,10 +46,10 @@ class update_1_1 extends container_aware_migration
 
 		$bbcode_data = array(
 			'mod' => array(
-				'bbcode_match'		=> '[mod={TEXT1;optional;defaultValue=}]{TEXT2}[/mod]',
-				'bbcode_tpl'		=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{TEXT1}</p><div class="bbc_mod_text">{TEXT2}</div>',
-				'bbcode_helpline'	=> '',
-				'display_on_posting'=> 1,
+				'bbcode_match'			=> '[mod={TEXT1;optional;defaultValue=}]{TEXT2}[/mod]',
+				'bbcode_tpl'			=> '<p class="bbc_mod_head">{L_MODBREAK_HEAD}{TEXT1}</p><div class="bbc_mod_text">{TEXT2}</div>',
+				'bbcode_helpline'		=> '',
+				'display_on_posting'	=> 1,
 			),
 		);
 
