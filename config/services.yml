@@ -4,5 +4,9 @@ services:
         arguments:
             - '@auth'
             - '@request'
+            - '@user'
+            - '%core.php_ext%' 
+            - '@language'
+            - '@template'
         tags:
             - { name: event.listener }
