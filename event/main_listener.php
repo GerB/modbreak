@@ -79,12 +79,12 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/<MOD(?s).*?<\/MOD>/i', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/(<MOD.*?=")(.+?)("(?s).*?<\/MOD>)/i', function ($regex_a) 
+		$text = preg_replace_callback('/(<MOD.*?=")(.+?)("(?s).*?<\/MOD>)/is', function ($regex_a) 
 			{
 				$username_var = '{@mod_break_username@'.$regex_a[2].'@}';
 				return $regex_a[1].$username_var.$regex_a[3];
 			}, $text);
-		$text = preg_replace_callback('/(<MOD.*?=")(.*?)(".*?time=)([0-9]*)(.*?user_id=)([0-9]*)(.*?\](?s).*?<\/MOD>)/i', function ($regex_a) 
+		$text = preg_replace_callback('/(<MOD.*?=")(.*?)(".*?time=)([0-9]*)(.*?user_id=)([0-9]*)(.*?\](?s).*?<\/MOD>)/is', function ($regex_a) 
 			{
 				$timestamp_var = '{@mod_break_timestamp@'.$regex_a[4].'@}';
 				$userid_var = '{@mod_break_userid@'.$regex_a[6].'@}';
@@ -98,7 +98,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/\{@mod_break.*?@\}/', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}.*?\{@mod_break_timestamp@(.*?)@\}.*?\{@mod_break_userid@(.*?)@\}/', function ($regex_a) 
+		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}.*?\{@mod_break_timestamp@(.*?)@\}.*?\{@mod_break_userid@(.*?)@\}/is', function ($regex_a) 
 			{
 				$username = $regex_a[1];
 				$formatted_date = $this->user->format_date($regex_a[2], false, false);

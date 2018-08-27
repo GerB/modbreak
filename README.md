@@ -1,15 +1,17 @@
-## This is ModBreakX, an eXtended variant of ModBreak by Ger. Don't use this repo in live boards! This repo serves only as a developer source for the original ModBreak.
+## ModBreak BBcode 
 
-MBX have the following advantages:
+Modbreak Extended version, created in cooperation with [LukeCWS](https://github.com/LukeWCS) 
+
+Features:
+* Add a BBcode for moderators to make an obvious remark in a post
+* Only available for moderators
+* Non-moderators get the default error message for not being allowed to use this BBcode
+* Styling provided in extension, can be overwritten in your own CSS definitions [Look here](https://www.phpbb.com/customise/db/extension/modbreak_bbcode/support/topic/194041)
 * Displays the date and time of ModBreak messages in postings. The date format is displayed with the user's date settings.
 * The username is clickable and linked to the user profile.
 * Adds its own BBcode button, which can also send the user name, timestamp, and user ID to the editor. Manually adding the username is no longer needed. The standard mod-button is disabled.
 * Has additional language variables to allow 3 different BBcode representations: 1) Without parameters. 2) Only with user name. 3) With clickable username, date and time. Type 1 & 2 are primarily designed for compatibilty with old BBcodes already stored in posts with ModBreak 1.1.0.
-* Small fixes: 1) Button wasn't hide for user's without permissions. 2) BBcode wasn't removed on uninstall.
-
-LukeWCS, 2018
-
-# Modbreak BBcode
+* Languages en, de and nl included
 
 ## Installation
 
