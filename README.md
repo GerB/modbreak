@@ -6,7 +6,7 @@ Features:
 * Add a BBcode for moderators to make an obvious remark in a post
 * Only available for moderators
 * Non-moderators get the default error message for not being allowed to use this BBcode
-* Styling provided in extension, can be overwritten in your own CSS definitions [Look here](https://www.phpbb.com/customise/db/extension/modbreak_bbcode/support/topic/194041)
+* Styling provided in extension, can be overwritten in your own CSS definitions ([Look here](https://www.phpbb.com/customise/db/extension/modbreak_bbcode/support/topic/194041))
 * Displays the date and time of ModBreak messages in postings. The date format is displayed with the user's date settings.
 * The username is clickable and linked to the user profile.
 * Adds its own BBcode button, which can also send the user name, timestamp, and user ID to the editor. Manually adding the username is no longer needed. The standard mod-button is disabled.
