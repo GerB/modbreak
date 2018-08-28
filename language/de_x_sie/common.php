@@ -27,8 +27,8 @@ if (empty($lang) || !is_array($lang))
 // Some characters you may want to copy&paste:
 // ’ » „ “ — …
 $lang = array_merge($lang, array(
-	'MODBREAK_HEAD'				=> 'Moderator-Nachricht',
+	'MODBREAK_HEAD'					=> 'Moderator-Nachricht',
 	'MODBREAK_HEAD_FROM'			=> ' von: ',
-	'MODBREAK_HEAD_DATE_SEPARATOR'		=> ' » ',
+	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Moderator-Nachricht in Beitrag einfügen: [mod]Text[/mod]     Kann nur von Moderatoren benutzt werden',
 ));
