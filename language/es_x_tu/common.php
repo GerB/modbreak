@@ -27,8 +27,8 @@ if (empty($lang) || !is_array($lang))
 // Some characters you may want to copy&paste:
 // ’ » „ “ — …
 $lang = array_merge($lang, array(
-	'MODBREAK_HEAD'						=> 'Mensaje de Moderador',
-	'MODBREAK_HEAD_FROM'				=> ' de: ',
-	'MODBREAK_HEAD_DATE_SEPARATOR'		=> ' » ',
-	'MODBREAK_BUTTON_TOOLTIP'			=> 'Insertar mensaje de Moderador en mensaje: [mod]Texto[/mod] Puede ser usado sólo por Moderadores',
+	'MODBREAK_HEAD'					=> 'Mensaje de Moderador',
+	'MODBREAK_HEAD_FROM'			=> ' de: ',
+	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
+	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insertar mensaje de Moderador en mensaje: [mod]Texto[/mod] Puede ser usado sólo por Moderadores',
 ));
