@@ -22,7 +22,7 @@ Features:
 
 * Go to "ACP" > "Customise" > "Extensions" and enable the "Modbreak" extension.
 
-Note that there won't be a button created for this BBcode since it's moderator-only.
+Note that ACP setting for this BBcode is set not to display the button on the posting page, yet it will be visible for moderators since it's moderator-only.
 
 ## Styling
 Some default styling is added in the extension. Change or override the definitions for 
