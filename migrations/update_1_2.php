@@ -5,7 +5,7 @@
  * Modbreak
  *
  * @copyright (c) 2016 Ger Bruinsma
- * @copyright (c) 2018, LukeWCS
+ * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */

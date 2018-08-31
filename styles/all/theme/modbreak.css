@@ -9,6 +9,11 @@ p.bbc_mod_head {
 	border: 1px solid #246594;
 	border-radius: 8px 8px 0px 0px;
 }
+/* PROFILE LINK */
+.bbc_mod_head a {
+	color: #fff;
+	text-decoration: underline;
+}
 /* MESSAGE */
 .bbc_mod_text {
 	border-style: solid;
@@ -18,9 +23,4 @@ p.bbc_mod_head {
 	width: 60%;
 	margin-left: 50px;
 	padding: 6px 12px;
-}
-/* PROFILE LINK */
-.bbc_mod_head a {
-	color: #fff;
-	text-decoration: underline;
 }
