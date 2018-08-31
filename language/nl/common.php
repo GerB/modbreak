@@ -28,7 +28,7 @@ if (empty($lang) || !is_array($lang))
 // ’ » „ “ — …
 $lang = array_merge($lang, array(
 	'MODBREAK_HEAD'					=> 'Opmerking moderator',
-    'MODBREAK_HEAD_FROM'			=> ' van: ',
+	'MODBREAK_HEAD_FROM'			=> ' van: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Voeg moderator bericht in: [mod]Tekst[/mod]     Alleen bruikbaar voor moderators',
 ));

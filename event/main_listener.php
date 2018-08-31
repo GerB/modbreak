@@ -79,7 +79,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/<MOD(?s).*?<\/MOD>/i', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/(<MOD.*?mod=").*?(".*?\[\s*mod=\s*)(.*?)(\s*\]|\s*time=\s*|\s*user_id=\s*)((?s).*?<\/MOD>)/i', function ($regex_a) 
+		$text = preg_replace_callback('/(<MOD.*?mod=").*?(".*?\[\s*mod=\s*)(.*?)(\s*\]|\s*time=|\s*user_id=)((?s).*?<\/MOD>)/i', function ($regex_a) 
 			{
 				$username_var = '{@mod_break_username@'.$regex_a[3].'@}';
 				return $regex_a[1].$username_var.$regex_a[2].$regex_a[3].$regex_a[4].$regex_a[5];
@@ -98,7 +98,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/\{@mod_break.*?@\}/', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}.*?\{@mod_break_timestamp@(.*?)@\}.*?\{@mod_break_userid@(.*?)@\}/', function ($regex_a) 
+		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}\{@mod_break_timestamp@(.*?)@\}\{@mod_break_userid@(.*?)@\}/', function ($regex_a) 
 			{
 				$username = $regex_a[1];
 				$formatted_date = $this->user->format_date($regex_a[2], false, false);
@@ -116,11 +116,11 @@ class main_listener implements EventSubscriberInterface
 		$event['text'] = $text;
 	}
 	
-	// Create some variables for use in JS. (LukeWCS)
+	// Create some variables for use in the JS part. (LukeWCS)
 	public function create_script_variables($event)
 	{
 		$template_data = array(
-			'S_USER_ID'		=> $this->user->data['user_id'],
+			'S_USER_ID'				=> $this->user->data['user_id'],
 			'S_MODBREAK_ALLOWED'	=> $this->auth->acl_get('m_', $this->request->variable('f', 0)),
 		);	
 		$this->template->assign_vars($template_data);
