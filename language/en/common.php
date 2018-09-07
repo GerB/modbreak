@@ -8,9 +8,10 @@
  * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
- * Lang_iso   : en
- * Lang_ver   : 1.2.0
- * Lang_author: LukeWCS
+ * Lang_iso     : en
+ * Lang_ver     : 1.2.0
+ * Lang_author  : LukeWCS
+ * Lang_tab_size: 4
  *
  */
 
@@ -31,4 +32,7 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_FROM'			=> ' from: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insert moderator message in post: [mod]Text[/mod]     Can only be used by moderators',
+	'MODBREAK_OPT_LABEL'			=> 'Moderator message',
+	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; as message box',
+	'MODBREAK_OPT_FULLPOST'			=> '&bull; as full post',
 ));

@@ -8,9 +8,10 @@
  * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
- * Lang_iso   : es (Formal Honorifics - USTED)
- * Lang_ver   : 1.2.0
- * Lang_author: ThE KuKa - http://www.phpbb-es.com
+ * Lang_iso     : es (Formal Honorifics - USTED)
+ * Lang_ver     : 1.2.0
+ * Lang_author  : ThE KuKa - http://www.phpbb-es.com
+ * Lang_tab_size: 4
  *
  */
 
@@ -31,4 +32,7 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_FROM'			=> ' de: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insertar mensaje de Moderador en mensaje: [mod]Texto[/mod] Puede ser usado sólo por Moderadores',
+	'MODBREAK_OPT_LABEL'			=> 'Moderator message',
+	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; as message box',
+	'MODBREAK_OPT_FULLPOST'			=> '&bull; as full post',
 ));

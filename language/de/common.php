@@ -8,9 +8,10 @@
  * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
- * Lang_iso   : de
- * Lang_ver   : 1.2.0
- * Lang_author: LukeWCS
+ * Lang_iso     : de
+ * Lang_ver     : 1.2.0
+ * Lang_author  : LukeWCS
+ * Lang_tab_size: 4
  *
  */
 
@@ -31,4 +32,7 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_FROM'			=> ' von: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Moderator-Nachricht in Beitrag einfügen: [mod]Text[/mod]     Kann nur von Moderatoren benutzt werden',
+	'MODBREAK_OPT_LABEL'			=> 'Moderator-Nachricht',
+	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; als Nachrichten-Box',
+	'MODBREAK_OPT_FULLPOST'			=> '&bull; als Beitrag',
 ));

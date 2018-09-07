@@ -9,7 +9,8 @@ Features:
 * Styling provided in extension, can be overwritten in your own CSS definitions ([Look here](https://www.phpbb.com/customise/db/extension/modbreak_bbcode/support/topic/194041))
 * Displays the date and time of ModBreak messages in postings. The date format is displayed with the user's date settings.
 * The username is clickable and linked to the user profile.
-* Adds its own BBcode button, which can also send the user name, timestamp, and user ID to the editor. Manually adding the username is no longer needed. The standard mod-button is disabled.
+* Supports two message types: 1) message box (as before). 2) full post (new).
+* Adds its own BBcode button (option list), which sends all BBcode parameters inclusive user name to the editor. So manually adding the user name is no longer needed. The standard mod-button is disabled now.
 * Adds a tooltip for the button, which can be translated in the appropriate language file.
 * Has additional language variables to allow 3 different BBcode representations: 1) Without parameters. 2) Only with user name. 3) With clickable username, date and time. Type 1 & 2 are primarily designed for compatibilty with old BBcodes already stored in posts with ModBreak 1.1.0.
 * Languages en, de, es, pt_br, and nl included
