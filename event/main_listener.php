@@ -23,7 +23,7 @@ class main_listener implements EventSubscriberInterface
 	protected $user;
 	protected $php_ext;
 	protected $language;
-	protected $template; 	
+	protected $template;
 	
 	static public function getSubscribedEvents()
 	{
@@ -79,17 +79,18 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/<MOD(?s).*?<\/MOD>/i', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/(<MOD.*?mod=").*?(".*?\[\s*mod=\s*)(.*?)(\s*\]|\s*time=|\s*user_id=)((?s).*?<\/MOD>)/i', function ($regex_a) 
-			{
-				$username_var = '{@mod_break_username@'.$regex_a[3].'@}';
-				return $regex_a[1].$username_var.$regex_a[2].$regex_a[3].$regex_a[4].$regex_a[5];
-			}, $text);
-		$text = preg_replace_callback('/(<MOD.*?mod=")(.*?)(".*?\[\s*mod=\s*)(.*?)(\s*time=\s*)([0-9]*)(\s*user_id=\s*)([0-9]*)(\s*\](?s).*?<\/MOD>)/i', function ($regex_a) 
-			{
-				$timestamp_var = '{@mod_break_timestamp@'.$regex_a[6].'@}';
-				$userid_var = '{@mod_break_userid@'.$regex_a[8].'@}';
-				return $regex_a[1].$regex_a[2].$timestamp_var.$userid_var.$regex_a[3].$regex_a[4].$regex_a[5].$regex_a[6].$regex_a[7].$regex_a[8].$regex_a[9];
-			}, $text);
+		$text = preg_replace_callback('/(<MOD\s*mod=").*?(".*?\[\s*mod=\s*)(.*?)(\s*\]|\s*time=|\s*user_id=|\s*mode=)((?s).*?<\/MOD>)/i', function ($regex_a) 
+		{
+			$username_var = '{@mod_break_username@'.$regex_a[3].'@}';
+			return $regex_a[1].$username_var.$regex_a[2].$regex_a[3].$regex_a[4].$regex_a[5];
+		}, $text);
+		$text = preg_replace_callback('/(<MOD\s*mod=")(.*?)(".*?\[\s*mod=\s*)(.*?)(\s*time=\s*)([0-9]*)(\s*user_id=\s*)([0-9]*)(\s*mode=\s*)([01])((?s).*?\].*?<\/MOD>)/i', function ($regex_a) 
+		{
+			$time_var = '{@mod_break_time@'.$regex_a[6].'@}';
+			$userid_var = '{@mod_break_userid@'.$regex_a[8].'@}';
+			$mode_var = '{@mod_break_mode@'.$regex_a[10].'@}';
+			return $regex_a[1].$regex_a[2].$time_var.$userid_var.$mode_var.$regex_a[3].$regex_a[4].$regex_a[5].$regex_a[6].$regex_a[7].$regex_a[8].$regex_a[9].$regex_a[10].$regex_a[11];
+		}, $text);
 		$event['text'] = $text;
 	}
 	
@@ -98,21 +99,30 @@ class main_listener implements EventSubscriberInterface
 	{
 		if (!preg_match('/\{@mod_break.*?@\}/', $event['text'])) { return; }
 		$text = $event['text'];
-		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}\{@mod_break_timestamp@(.*?)@\}\{@mod_break_userid@(.*?)@\}/', function ($regex_a) 
-			{
-				$username = $regex_a[1];
-				$formatted_date = $this->user->format_date($regex_a[2], false, false);
-				$profile_url = generate_board_url().'/memberlist.'.$this->php_ext.'?mode=viewprofile&u='.$regex_a[3];
-				$from = $this->language->lang('MODBREAK_HEAD_FROM');
-				$separator = $this->language->lang('MODBREAK_HEAD_DATE_SEPARATOR');
-				return $from.'<a href="'.$profile_url.'">'.$username.'</a>'.$separator.$formatted_date;
-			}, $text);
+		global $modbreak_mode;
+		$modbreak_mode = null;
+		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}\{@mod_break_time@(.*?)@\}\{@mod_break_userid@(.*?)@\}\{@mod_break_mode@(.*?)@\}/', function ($regex_a) 
+		{
+			global $modbreak_mode;
+			$username = $regex_a[1];
+			$formatted_date = $this->user->format_date($regex_a[2], false, false);
+			$profile_url = generate_board_url().'/memberlist.'.$this->php_ext.'?mode=viewprofile&u='.$regex_a[3];
+			if ($modbreak_mode !== 1) { $modbreak_mode = intval($regex_a[4]); }
+			$from = $this->language->lang('MODBREAK_HEAD_FROM');
+			$separator = $this->language->lang('MODBREAK_HEAD_DATE_SEPARATOR');
+			return $from.'<a href="'.$profile_url.'">'.$username.'</a>'.$separator.$formatted_date;
+		}, $text);
 		$text = preg_replace_callback('/\{@mod_break_username@(.*?)@\}/', function ($regex_a) 
-			{
-				$username = $regex_a[1];
-				$from = $this->language->lang('MODBREAK_HEAD_FROM');
-				return $from.$username;
-			}, $text);
+		{
+			$username = $regex_a[1];
+			$from = $this->language->lang('MODBREAK_HEAD_FROM');
+			return $from.$username;
+		}, $text);
+		if($modbreak_mode === 1) 
+		{
+			$text = str_replace('class="bbc_mod_head"', 'class="bbc_mod_head_nohead"', $text);
+			$text = str_replace('class="bbc_mod_text"', 'class="bbc_mod_text_nohead"', $text);
+		}
 		$event['text'] = $text;
 	}
 	

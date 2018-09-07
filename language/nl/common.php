@@ -8,9 +8,10 @@
  * @copyright (c) 2018 LukeWCS
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
- * Lang_iso   : nl [Dutch]
- * Lang_ver   : 1.2.0
- * Lang_author: Ger Bruinsma
+ * Lang_iso     : nl [Dutch]
+ * Lang_ver     : 1.2.0
+ * Lang_author  : Ger Bruinsma
+ * Lang_tab_size: 4
  *
  */
 
@@ -31,4 +32,7 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_FROM'			=> ' van: ',
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Voeg moderator bericht in: [mod]Tekst[/mod]     Alleen bruikbaar voor moderators',
+	'MODBREAK_OPT_LABEL'			=> 'Moderator message',
+	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; as message box',
+	'MODBREAK_OPT_FULLPOST'			=> '&bull; as full post',
 ));

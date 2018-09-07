@@ -9,10 +9,12 @@ p.bbc_mod_head {
 	border: 1px solid #246594;
 	border-radius: 8px 8px 0px 0px;
 }
-/* PROFILE LINK */
 .bbc_mod_head a {
 	color: #fff;
 	text-decoration: underline;
+}
+.bbc_mod_head_nohead {
+	display: none;
 }
 /* MESSAGE */
 .bbc_mod_text {
