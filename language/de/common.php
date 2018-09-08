@@ -33,6 +33,6 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Moderator-Nachricht in Beitrag einfügen: [mod]Text[/mod]     Kann nur von Moderatoren benutzt werden',
 	'MODBREAK_OPT_LABEL'			=> 'Moderator-Nachricht',
-	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; als Nachrichten-Box',
+	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; als Kasten im Beitrag',
 	'MODBREAK_OPT_FULLPOST'			=> '&bull; als Beitrag',
 ));
