@@ -33,6 +33,6 @@ $lang = array_merge($lang, array(
 	'MODBREAK_HEAD_DATE_SEPARATOR'	=> ' » ',
 	'MODBREAK_BUTTON_TOOLTIP'		=> 'Insertar mensaje de Moderador en mensaje: [mod]Texto[/mod] Puede ser usado sólo por Moderadores',
 	'MODBREAK_OPT_LABEL'			=> 'Moderator message',
-	'MODBREAK_OPT_MESSAGEBOX'		=> '&bull; as message box',
-	'MODBREAK_OPT_FULLPOST'			=> '&bull; as full post',
+	'MODBREAK_OPT_MESSAGEBOX'		=> 'As a box in the post',
+	'MODBREAK_OPT_FULLPOST'			=> 'As full post',
 ));

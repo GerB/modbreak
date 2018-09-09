@@ -1,6 +1,6 @@
 <!-- IF S_MODBREAK_ALLOWED -->
-	<select name="addbbcodemod" class="bbcode-mod" onchange="bbfontstyle('[mod={S_USERNAME} time=' + (timestamp = Math.floor(Date.now() / 1000)) + ' user_id={S_USER_ID} mode=' + (this.form.addbbcodemod.selectedIndex -1) + ']', '[/mod]');this.form.addbbcodemod.selectedIndex = 0;" title="{L_MODBREAK_BUTTON_TOOLTIP}">
-		<option selected="selected">{L_MODBREAK_OPT_LABEL}</option>
+	<select name="addbbcodemod" class="bbcode-mod" onchange="bbfontstyle('[mod={S_USERNAME} time=' + Math.floor(Date.now() / 1000) + ' user_id={S_USER_ID} mode=' + (this.form.addbbcodemod.selectedIndex - 1) + ']', '[/mod]');this.form.addbbcodemod.selectedIndex = 0;" title="{L_MODBREAK_BUTTON_TOOLTIP}">
+		<option selected="selected" hidden>{L_MODBREAK_OPT_LABEL}</option>
 		<option>{L_MODBREAK_OPT_MESSAGEBOX}</option>
 		<option>{L_MODBREAK_OPT_FULLPOST}</option>
 	</select>
