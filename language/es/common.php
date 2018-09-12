@@ -9,7 +9,7 @@
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  * Lang_iso     : es (Formal Honorifics - USTED)
- * Lang_ver     : 1.2.0
+ * Lang_ver     : 1.3.1
  * Lang_author  : ThE KuKa - http://www.phpbb-es.com
  * Lang_tab_size: 4
  *
