@@ -77,7 +77,7 @@ class install_modbreak extends container_aware_migration
 				$bbcode_id = $row_exists['bbcode_id'];
 				$sql = 'UPDATE ' . BBCODES_TABLE . '
 					SET ' . $this->db->sql_build_array('UPDATE', $bbcode_array) . '
-					WHERE bbcode_id = ' . $bbcode_id;
+					WHERE bbcode_id = ' . (int) $bbcode_id;
 				$this->db->sql_query($sql);
 			}
 			else
@@ -127,4 +127,4 @@ class install_modbreak extends container_aware_migration
 		$this->db->sql_query('DELETE FROM ' . BBCODES_TABLE . " WHERE LOWER(bbcode_tag) = 'mod'");
 	}
 	
-} // EoF
+} 
