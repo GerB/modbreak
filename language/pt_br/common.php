@@ -9,7 +9,7 @@
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  * Lang_iso     : pt_br
- * Lang_ver     : 1.3.1
+ * Lang_ver     : 1.2.0
  * Lang_author  : eunaumtenhoid 2018 (https://github.com/phpBBTraducoes)
  * Lang_tab_size: 4
  *

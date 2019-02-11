@@ -9,7 +9,7 @@
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  * Lang_iso     : ru
- * Lang_ver     : 1.0
+ * Lang_ver     : 1.3.1
  * Lang_author  : Jim_Di
  * Lang_tab_size: 4
  *
