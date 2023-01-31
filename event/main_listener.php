@@ -81,7 +81,7 @@ class main_listener implements EventSubscriberInterface
 		$text = $event['text'];
 		$text = preg_replace_callback('/(<MOD\s*mod=").*?(".*?\[\s*mod=\s*)(.*?)(\s*\]|\s*time=|\s*user_id=|\s*mode=)((?s).*?<\/MOD>)/i', function ($regex_a) 
 		{
-			$username_var = '{@mod_break_username@'.$regex_a[3].'@}';
+			$username_var = htmlentities('{@mod_break_username@'.$regex_a[3].'@}');
 			return $regex_a[1].$username_var.$regex_a[2].$regex_a[3].$regex_a[4].$regex_a[5];
 		}, $text);
 		$text = preg_replace_callback('/(<MOD\s*mod=")(.*?)(".*?\[\s*mod=\s*)(.*?)(\s*time=\s*)([0-9]*)(\s*user_id=\s*)([0-9]*)(\s*mode=\s*)([01])((?s).*?\].*?<\/MOD>)/i', function ($regex_a) 
